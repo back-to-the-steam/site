@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: 'src/index.tsx',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'build'),
@@ -22,8 +22,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // ton template
-      filename: 'index.html',          // fichier généré dans build/
+      template: './public/index.html',
+      filename: 'index.html',
     }),
   ],
   devServer: {
