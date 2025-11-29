@@ -1,0 +1,22 @@
+{
+  "name": "back_to_the_steam",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://LeGeekosaure.github.io/Back-To-The-Steam-site",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "tsc && webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.9.3"
+  }
+}
