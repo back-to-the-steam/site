@@ -1,0 +1,236 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #F3F4F6;
+  color: #1f2937;
+}/* Hero */
+.progress-hero {
+  background: linear-gradient(to bottom right, #374151, #1f2937, #111827);
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.progress-hero h1 {
+  font-size: 3rem;
+}
+
+.progress-hero p {
+  color: #d1d5db;
+  font-size: 1.25rem;
+}
+
+/* Stats */
+.progress-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+@media(min-width:768px) {
+  .progress-stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #4b5563;
+}
+
+.stat-card.completed { border: 2px solid #22c55e; }
+.stat-card.in-progress { border: 2px solid #3b82f6; }
+.stat-card.avg-progress { border: 2px solid #9ca3af; }
+.stat-card.total { border: 2px solid #9ca3af; }
+
+
+/* Timeline */
+/* Timeline général */
+.timeline {
+  max-width: 1200px;
+  width: 97%;
+  position: relative;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 2.2rem;  /* ALIGNEMENT EXACT AVEC LA PUCE -> ne pas toucher */
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #d1d5db;
+  z-index: 0;
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem 1rem 1rem 3rem;
+  border-left: 4px solid #d1d5db;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item.completed { border-left-color: #22c55e; }
+.timeline-item.in-progress { border-left-color: #3b82f6; }
+.timeline-item.upcoming { border-left-color: #9ca3af; }
+
+/* Icône à gauche */
+
+
+/* Ligne grise derrière les puces */
+
+
+/* On force la puce à être dans la carte */
+.timeline-icon {
+  position: relative;
+  z-index: 2; /* Au-dessus de la ligne */
+  background: white;
+  border-radius: 9999px;
+  padding: 4px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -2.1rem; /* Place parfaitement la puce SUR la ligne */
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Contenu principal divisé gauche / droite */
+.timeline-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+/* Partie gauche (titre + date + description) */
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+  min-width: 200px;
+}
+
+.timeline-left h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.timeline-date {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.timeline-description {
+  margin-top: 0.5rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+/* Partie droite (pourcentage + statut) */
+.timeline-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center; /* <-- centre verticalement par rapport à gauche */
+  min-width: 120px;
+  text-align: right;
+}
+
+.timeline-percentage {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.timeline-status {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  text-align: center;
+}
+
+.timeline-status.completed { background: #d1fae5; color: #065f46; }
+.timeline-status.in-progress { background: #dbeafe; color: #1e3a8a; }
+.timeline-status.upcoming { background: #f3f4f6; color: #6b7280; }
+
+/* Progress bar sous le texte */
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.5rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.progress-fill.completed { background: #22c55e; }
+.progress-fill.in-progress { background: #3b82f6; }
+.progress-fill.upcoming { background: #d1d5db; }
+/* ===================== */
+/* FOOTER                */
+/* ===================== */
+
+  footer {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  background: #111827;;
+  color: white;
+  text-align: center;
+}
+
+.timeline-footer {
+margin-left: auto;
+margin-right: auto;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #F6F5FF;
+  color: #6b7280;
+ font-size: 1rem;
+  max-width: 1200px;
+  width: 97%;
+    border-radius: 10px;
+}
+.timeline-footer h3{
+  text-align: center;
+  color: #3f434b;
+  font-size: 1.5rem;
+
+}

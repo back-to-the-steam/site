@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}/* Hero */
+.hero-section {
+  background: linear-gradient(to bottom right, #374151, #1f2937, #111827);
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+.hero-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-title { font-size: 3rem; }
+.hero-subtitle { font-size: 1.25rem; color: #d1d5db; }
+.hero-button {
+  border: 2px solid white;
+  padding: 0.75rem 3rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+  background: none;
+  color: white;
+}
+.hero-button:hover {
+  background: white;
+  color: #111827;
+}
+
+/* Sections */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+.grid-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.grid-2 > div {
+  flex: 1 1 45%;
+}
+
+/* Cards */
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.feature-card {
+  flex: 1 1 250px;
+  background: white;
+  border: 2px solid #2563eb;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+.feature-card h3 { margin-bottom: 0.5rem; }
+.feature-card p { color: #4b5563; }
+
+/* Images */
+.img-cover { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 0.5rem; 
+}

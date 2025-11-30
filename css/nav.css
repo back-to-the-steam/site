@@ -1,0 +1,48 @@
+/* Supprime cette ligne si elle existe */
+nav {
+  position: fixed; 
+  width: 100%; 
+  z-index: 1000;
+  /* text-align: right; <-- supprime ça */
+}
+
+/* .nav-container gère déjà le flex */
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}/* Navigation */
+.nav { background-color: #1f2937; color: white; position: sticky; top: 0; z-index: 50; }
+.nav-logo {   background: none; border: none;  }
+.nav-container {
+  width: 100%; /* prend toute la largeur de l'écran */
+  display: flex;
+  justify-content: space-between; /* logo à gauche, liens à droite */
+  align-items: center;
+  padding: 0.5rem 2rem; /* espace intérieur, tu peux ajuster */
+  box-sizing: border-box; /* important pour que le padding reste à l'intérieur */
+  max-width: none; /* supprime la limite de 1200px */
+  margin: 0; /* plus de centrage automatique */
+}
+
+.nav-logo-img { height: 40px; cursor: pointer; }
+.nav-items { display: flex; gap: 1rem; }
+.nav-item { background: none; border: none; color: white; padding: 0.5rem 1rem; cursor: pointer; transition: 0.3s; }
+.nav-item:hover { background-color: #2563eb; border-radius: 4px; }
+
+/* Burger */
+.burger { display: none; font-size: 2rem; background: none; border: none; color: white; cursor: pointer; }
+
+/* Mobile Menu */
+.mobile-menu { display: none; flex-direction: column; background-color: #1f2937; border-top: 1px solid #374151; }
+.mobile-item { background: none; border: none; color: white; text-align: left; padding: 0.75rem 1rem; cursor: pointer; transition: 0.3s; }
+.mobile-item:hover { background-color: #2563eb; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-items { display: none; }
+  .burger { display: block; }
+  .mobile-menu.show { display: flex; }
+}
