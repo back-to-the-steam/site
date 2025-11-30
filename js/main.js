@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".feature-cards");
   if (!container) return;
 
-  fetch("../data/featureCards.json")
+  fetch("./data/featureCards.json")
     .then(response => response.json())
     .then(features => {
       features.forEach(feature => {
