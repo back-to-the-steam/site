@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin</title>
+  <style>
+    body { background: #0F1218; color: #EAEAEA; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .login-box { background: #1a1f2e; padding: 2rem; border: 2px solid #C97B32; border-radius: 1rem; width: 300px; }
+    input { width: 100%; margin: 0.5rem 0; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #7393CE; background: #0F1218; color: #EAEAEA; }
+    button { width: 100%; padding: 0.5rem; border: none; border-radius: 0.5rem; background: #C97B32; color: #0F1218; cursor: pointer; }
+    p { margin-top: 0.5rem; font-size: 0.9rem; color: red; }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Admin Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Mot de passe">
+    <button id="loginBtn">Se connecter</button>
+    <p id="errorMsg"></p>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    // ⚡ Mets ici ta config Firebase
+ const firebaseConfig = {
+    apiKey: "AIzaSyBN8Qe4Mp0dfRxKnlXUVGggILPxfn5ygHY",
+    authDomain: "back-to-the-steam-steam.firebaseapp.com",
+    projectId: "back-to-the-steam-steam",
+    storageBucket: "back-to-the-steam-steam.firebasestorage.app",
+    messagingSenderId: "827452185860",
+    appId: "1:827452185860:web:65cc1b7a0c98922514c451",
+    measurementId: "G-8H7R0K9VV5"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const loginBtn = document.getElementById("loginBtn");
+    const errorMsg = document.getElementById("errorMsg");
+
+    loginBtn.addEventListener("click", async () => {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      errorMsg.textContent = "";
+
+      if (!email || !password) {
+        errorMsg.textContent = "Remplis tous les champs";
+        return;
+      }
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        // Redirige vers la page admin
+        window.location.href = "admin.html";
+      } catch (err) {
+        console.error(err);
+        errorMsg.textContent = "Email ou mot de passe incorrect";
+      }
+    });
+
+    // Vérifie si déjà connecté
+    onAuthStateChanged(auth, user => {
+      if (user) window.location.href = "admin.html";
+    });
+  </script>
+</body>
+</html>

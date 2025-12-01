@@ -26,6 +26,13 @@ body {
   max-width: none; /* supprime la limite de 1200px */
   margin: 0; /* plus de centrage automatique */
 }
+a {
+  text-decoration: none; /* supprime le soulignement */
+  color: inherit; /* garde la couleur héritée ou définie ailleurs */
+}
+
+/* Si tu veux un effet hover quand même */
+
 
 .nav-logo-img { height: 40px; cursor: pointer; }
 .nav-items { display: flex; gap: 1rem; }
@@ -36,7 +43,24 @@ body {
 .burger { display: none; font-size: 2rem; background: none; border: none; color: white; cursor: pointer; }
 
 /* Mobile Menu */
-.mobile-menu { display: none; flex-direction: column; background-color: #1f2937; border-top: 1px solid #374151; }
+.mobile-menu {
+  position: absolute;
+  top: 100%; /* juste sous la nav */
+  right: 0;
+  width: 200px; /* adapte selon ton menu */
+  background-color: #1f2937;
+  border-top: 1px solid #374151;
+
+  transform: translateX(100%); /* menu caché à droite */
+  transition: transform 0.3s ease; /* animation */
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.show {
+  transform: translateX(0); /* menu visible */
+}
+
 .mobile-item { background: none; border: none; color: white; text-align: left; padding: 0.75rem 1rem; cursor: pointer; transition: 0.3s; }
 .mobile-item:hover { background-color: #2563eb; }
 

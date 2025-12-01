@@ -1,0 +1,44 @@
+body {
+  background: #0F1218;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #1a1f2e;
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid #C97B32;
+  text-align: center;
+  width: 320px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #7393CE;
+  background: #0F1218;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #C97B32;
+  color: #0F1218;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+p {
+  color: red;
+  margin-top: 10px;
+}

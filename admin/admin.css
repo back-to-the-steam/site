@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  background: #0F1218;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.admin-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  color: #C97B32;
+  font-family: Orbitron, sans-serif;
+  margin-bottom: 20px;
+}
+
+.btn-add {
+  background: #C97B32;
+  border: none;
+  padding: 12px 20px;
+  color: #0F1218;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1f2e;
+  border: 1px solid #7393CE;
+}
+
+.faq-table th,
+.faq-table td {
+  border-bottom: 1px solid #7393CE;
+  padding: 12px;
+}
+
+.faq-table th {
+  background: rgba(201, 123, 50, 0.2);
+  color: #C97B32;
+}
+
+.action-btn {
+  padding: 8px 10px;
+  margin-right: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+.btn-edit {
+  background: #7393CE;
+  color: #0F1218;
+}
+
+.btn-delete {
+  background: #d9534f;
+  color: white;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #000a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #1a1f2e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  border: 2px solid #C97B32;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  background: #0F1218;
+  border: 1px solid #7393CE;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-save {
+  background: #C97B32;
+  padding: 10px 20px;
+  border: none;
+  color: #0F1218;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-cancel {
+  background: #444;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}

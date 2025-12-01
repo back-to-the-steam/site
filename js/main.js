@@ -21,17 +21,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ------------------------
-//  LOAD NAV
+// LOAD NAV + BURGER
 // ------------------------
 document.addEventListener("DOMContentLoaded", () => {
+  const navContainer = document.getElementById('navigation');
+
+  if (!navContainer) return;
+
   fetch('../html/nav.html')
     .then(response => response.text())
     .then(html => {
-      const navContainer = document.getElementById('navigation');
-      if (navContainer) navContainer.innerHTML = html;
+      navContainer.innerHTML = html;
+
+      // ---- MENU BURGER ----
+      const burger = navContainer.querySelector(".burger");
+      const mobileMenu = navContainer.querySelector(".mobile-menu");
+
+      if (burger && mobileMenu) {
+        burger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("show"); // attention : CSS .show pour display:flex
+          burger.classList.toggle("active");
+        });
+      }
+
+      // Optionnel : fermer le menu mobile quand on clique sur un lien
+      navContainer.querySelectorAll(".mobile-item").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("show");
+          burger.classList.remove("active");
+        });
+      });
     })
     .catch(err => console.error("Erreur en chargeant la nav :", err));
 });
+
 
 // ------------------------
 //  FEATURE CARDS (JSON)
@@ -67,7 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Erreur JSON featureCards :", err));
 });
+     // ----- BURGER MENU -----
+      const burger = navContainer.querySelector(".burger");
+      const mobileMenu = navContainer.querySelector(".mobile-menu");
 
+      if (burger && mobileMenu) {
+        burger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("active");
+          burger.classList.toggle("active");
+        });
+      }
 // ------------------------
 //  TIMELINE PROGRESS (JSON)
 // ------------------------

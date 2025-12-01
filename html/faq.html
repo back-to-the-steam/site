@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="../css/faq.css">
 </head>
 <body>
-     <header>
-    <nav id="navigation"></nav>
-  </header>
-<main class="faq-main">
+<header>
+  <nav id="navigation"></nav>
+</header>
 
+<div class="faq-main">
+  
   <!-- Hero -->
   <section class="faq-hero">
     <div class="faq-hero-content">
@@ -19,25 +20,51 @@
       <p>Questions fréquentes sur le projet Back to the Steam</p>
     </div>
   </section>
+<div id="ask-container" class="ask-box">
+
+  <h2>Une question non répondue ? posez la votre</h2>
+
+  <input type="text" id="ask-question" placeholder="Écris ta question..." />
+
+  <select id="ask-category">
+    <option value="" disabled selected>Choisir une catégorie</option>
+    <option value="Projet">Projet</option>
+    <option value="Technique">Technique</option>
+    <option value="Équipe">Équipe</option>
+    <option value="Partenaires">Partenaires</option>
+    <option value="Compétition">Compétition</option>
+  </select>
+
+  <button id="send-question">Envoyer</button>
+
+  <p id="ask-status" style="margin-top:10px;"></p>
+
+</div>
 
   <!-- Content -->
   <section class="faq-section">
     <div class="faq-container">
+
+      <!-- Sidebar -->
       <aside class="faq-sidebar">
         <h3>Catégories</h3>
         <div class="faq-categories"></div>
       </aside>
+
+      <!-- Content -->
       <div class="faq-content">
-        <input type="text" id="faq-search" placeholder="Rechercher une question...">
+        <input type="text" id="searchInput" placeholder="Rechercher une question...">
         <div class="faq-list"></div>
       </div>
-      <div id="faq-container"></div>
+
     </div>
   </section>
 
-</main>
-
-
+</div>
+ <footer>
+  <a href="../admin/login.html">admin login</a>
+    <p>© 2025 Back to the Steam - Tous droits réservés</p>
+  </footer>
 <script type="module" src="../js/firebase.js"></script>
 <script type="module" src="../js/loadFaq.js"></script>
 <script type="module" src="../js/main.js"></script>

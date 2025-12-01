@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin FAQ</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-container">
+  <h1>Admin FAQ</h1>
+  <button id="add-btn" class="btn-add">+ Ajouter une question</button>
+
+  <table class="faq-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Catégorie</th>
+        <th>Réponse</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="faq-table-body">
+      <tr><td colspan="4">Chargement...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+
+    <h2 id="modal-title">Modifier la question</h2>
+
+    <label>Question</label>
+    <input id="modal-question" type="text">
+
+    <label>Réponse</label>
+    <textarea id="modal-answer"></textarea>
+
+    <label>Catégorie</label>
+    <select id="modal-category">
+      <option value="Projet">Projet</option>
+      <option value="Technique">Technique</option>
+      <option value="Équipe">Équipe</option>
+      <option value="Partenaires">Partenaires</option>
+      <option value="Compétition">Compétition</option>
+    </select>
+
+    <div class="modal-actions">
+      <button id="modal-save" class="btn-save">Enregistrer</button>
+      <button id="modal-close" class="btn-cancel">Annuler</button>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>
