@@ -1,178 +1,126 @@
 // ------------------------
-//  NAV SCROLL BUTTON
+//  MAIN JS - GLOBAL
 // ------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollBtn = document.getElementById("scrollToWorkshop");
 
-  if (scrollBtn) {
-    scrollBtn.addEventListener("click", () => {
-      const workshopElement = document.getElementById("workshop");
-      if (workshopElement) {
-        const navHeight = 80;
-        const targetPosition = workshopElement.offsetTop - navHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
-      }
-    });
-  }
-});
-
-// ------------------------
-// LOAD NAV + BURGER
-// ------------------------
-document.addEventListener("DOMContentLoaded", () => {
+async function initPage() {
+  // ------------------------
+  // 1️⃣ INJECTION DE LA NAV
+  // ------------------------
   const navContainer = document.getElementById('navigation');
+  if (navContainer) {
+    try {
+      const navHtml = await fetch('../html/nav.html').then(r => r.text());
+      navContainer.innerHTML = navHtml;
 
-  if (!navContainer) return;
-
-  fetch('../html/nav.html')
-    .then(response => response.text())
-    .then(html => {
-      navContainer.innerHTML = html;
-
-      // ---- MENU BURGER ----
+      // Burger menu
       const burger = navContainer.querySelector(".burger");
       const mobileMenu = navContainer.querySelector(".mobile-menu");
-
-      if (burger && mobileMenu) {
-        burger.addEventListener("click", () => {
-          mobileMenu.classList.toggle("show"); // attention : CSS .show pour display:flex
-          burger.classList.toggle("active");
-        });
-      }
-
-      // Optionnel : fermer le menu mobile quand on clique sur un lien
-      navContainer.querySelectorAll(".mobile-item").forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("show");
-          burger.classList.remove("active");
-        });
-      });
-    })
-    .catch(err => console.error("Erreur en chargeant la nav :", err));
-});
-
-
-// ------------------------
-//  FEATURE CARDS (JSON)
-// ------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".feature-cards");
-  if (!container) return;
-
-  fetch("../data/featureCards.json")
-    .then(response => response.json())
-    .then(features => {
-      features.forEach(feature => {
-        const card = document.createElement("div");
-        card.className = "feature-card";
-
-        const icon = document.createElement("div");
-        icon.className = "feature-icon";
-        icon.textContent = feature.icon;
-        card.appendChild(icon);
-
-        const title = document.createElement("h3");
-        title.className = "feature-title";
-        title.textContent = feature.title;
-        card.appendChild(title);
-
-        const desc = document.createElement("p");
-        desc.className = "feature-description";
-        desc.textContent = feature.description;
-        card.appendChild(desc);
-
-        container.appendChild(card);
-      });
-    })
-    .catch(err => console.error("Erreur JSON featureCards :", err));
-});
-     // ----- BURGER MENU -----
-      const burger = navContainer.querySelector(".burger");
-      const mobileMenu = navContainer.querySelector(".mobile-menu");
-
       if (burger && mobileMenu) {
         burger.addEventListener("click", () => {
           mobileMenu.classList.toggle("active");
           burger.classList.toggle("active");
         });
       }
-// ------------------------
-//  TIMELINE PROGRESS (JSON)
-// ------------------------
-document.addEventListener("DOMContentLoaded", async () => {
+    } catch (err) {
+      console.error("Erreur en chargeant la nav :", err);
+    }
+  }
+
+  // ------------------------
+  // 2️⃣ BOUTON SCROLL
+  // ------------------------
+  const scrollBtn = document.getElementById("scrollToWorkshop");
+  if (scrollBtn) {
+    scrollBtn.addEventListener("click", () => {
+      const workshopElement = document.getElementById("workshop");
+      if (workshopElement) {
+        window.scrollTo({ top: workshopElement.offsetTop - 80, behavior: "smooth" });
+      }
+    });
+  }
+
+  // ------------------------
+  // 3️⃣ FEATURE CARDS
+  // ------------------------
+  const featureContainer = document.querySelector(".feature-cards");
+  if (featureContainer) {
+    try {
+      const features = await fetch("../data/featureCards.json").then(r => r.json());
+      features.forEach(feature => {
+        const card = document.createElement("div");
+        card.className = "feature-card";
+        card.innerHTML = `
+          <div class="feature-icon">${feature.icon}</div>
+          <h3 class="feature-title">${feature.title}</h3>
+          <p class="feature-description">${feature.description}</p>
+        `;
+        featureContainer.appendChild(card);
+      });
+    } catch (err) {
+      console.error("Erreur JSON featureCards :", err);
+    }
+  }
+
+  // ------------------------
+  // 4️⃣ TIMELINE / PROGRESS
+  // ------------------------
   const timelineContainer = document.getElementById("timeline");
+  if (timelineContainer) {
+    try {
+      const data = await fetch("../data/progressdata.json").then(r => r.json());
+      const timelineItems = data.timelineItems;
 
-  // Stats
-  const statAverage = document.getElementById("stat-average");
-  const statCompleted = document.getElementById("stat-completed");
-  const statInProgress = document.getElementById("stat-in-progress");
-  const statTotal = document.getElementById("stat-total");
+      // Stats
+      const statAverage = document.getElementById("stat-average");
+      const statCompleted = document.getElementById("stat-completed");
+      const statInProgress = document.getElementById("stat-in-progress");
+      const statTotal = document.getElementById("stat-total");
 
-  try {
-    const response = await fetch("../data/progressdata.json");
-    const data = await response.json();
-    const timelineItems = data.timelineItems;
+      const total = timelineItems.length;
+      const completed = timelineItems.filter(i => i.pourcentage === 100).length;
+      const inProgress = timelineItems.filter(i => i.pourcentage > 0 && i.pourcentage < 100).length;
+      const avg = Math.round(timelineItems.reduce((sum, i) => sum + i.pourcentage, 0) / total);
 
-    // ------------------------
-    // Stats
-    // ------------------------
-    const total = timelineItems.length;
-    const completed = timelineItems.filter(i => i.pourcentage === 100).length;
-    const inProgress = timelineItems.filter(i => i.pourcentage > 0 && i.pourcentage < 100).length;
-    const avg = Math.round(timelineItems.reduce((sum, i) => sum + i.pourcentage, 0) / total);
+      if (statAverage) statAverage.textContent = avg + "%";
+      if (statCompleted) statCompleted.textContent = completed;
+      if (statInProgress) statInProgress.textContent = inProgress;
+      if (statTotal) statTotal.textContent = total;
 
-    if (statAverage) statAverage.textContent = avg + "%";
-    if (statCompleted) statCompleted.textContent = completed;
-    if (statInProgress) statInProgress.textContent = inProgress;
-    if (statTotal) statTotal.textContent = total;
+      // Timeline Cards
+      timelineItems.forEach(item => {
+        const statusClass = item.pourcentage === 100 ? "completed"
+                          : item.pourcentage > 0 ? "in-progress" : "upcoming";
+        const icon = item.pourcentage === 100 ? "✔" : item.pourcentage > 0 ? "⏳" : "○";
 
-    // ------------------------
-    // Timeline Cards
-    // ------------------------
-    timelineItems.forEach(item => {
-      let statusClass;
-      if (item.pourcentage === 100) statusClass = "completed";
-      else if (item.pourcentage > 0) statusClass = "in-progress";
-      else statusClass = "upcoming";
-
-      const icon = item.pourcentage === 100 ? "✔"
-                  : item.pourcentage > 0 ? "⏳"
-                  : "○";
-
-      const card = document.createElement("div");
-      card.className = `timeline-item ${statusClass}`;
-
-      card.innerHTML = `
-        <div class="timeline-icon">${icon}</div>
-        <div class="timeline-content">
-          <div class="timeline-left">
-            <h3>${item.titre}</h3>
-            <span class="timeline-date">${item.date}</span>
-            <p class="timeline-description">${item.description}</p>
-
-            <div class="progress-bar">
-              <div class="progress-fill ${statusClass}" style="width:${item.pourcentage}%;"></div>
+        const card = document.createElement("div");
+        card.className = `timeline-item ${statusClass}`;
+        card.innerHTML = `
+          <div class="timeline-icon">${icon}</div>
+          <div class="timeline-content">
+            <div class="timeline-left">
+              <h3>${item.titre}</h3>
+              <span class="timeline-date">${item.date}</span>
+              <p class="timeline-description">${item.description}</p>
+              <div class="progress-bar">
+                <div class="progress-fill ${statusClass}" style="width:${item.pourcentage}%;"></div>
+              </div>
+            </div>
+            <div class="timeline-right">
+              <div class="timeline-percentage">${item.pourcentage}%</div>
+              <span class="timeline-status ${statusClass}">
+                ${statusClass === "completed" ? "Complété" : statusClass === "in-progress" ? "En cours" : "À venir"}
+              </span>
             </div>
           </div>
+        `;
+        timelineContainer.appendChild(card);
+      });
 
-          <div class="timeline-right">
-            <div class="timeline-percentage">${item.pourcentage}%</div>
-            <span class="timeline-status ${statusClass}">
-              ${statusClass === "completed" ? "Complété" :
-                statusClass === "in-progress" ? "En cours" : "À venir"}
-            </span>
-          </div>
-        </div>
-      `;
-
-      timelineContainer.appendChild(card);
-    });
-
-  } catch (err) {
-    console.error("Erreur JSON:", err);
+    } catch (err) {
+      console.error("Erreur JSON timeline :", err);
+    }
   }
-});
+}
+
+// ⚡ INIT
+document.addEventListener("DOMContentLoaded", initPage);
