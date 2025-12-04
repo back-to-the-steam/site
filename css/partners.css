@@ -33,7 +33,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 .sponsors h2 { text-align:center; font-size:2rem; margin-bottom:1rem; }
 .sponsors p { text-align:center; color:#4b5563; margin-bottom:2rem; }
 .sponsors-grid { display:grid; gap:1.5rem; justify-items:center; }
-.logo-placeholder { width:100%; max-width:200px; height:8rem; border:2px dashed #9ca3af; border-radius:1rem; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-weight:bold; }
+.logo-placeholder { width:100%; max-width:200px; height:8rem; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-weight:bold; }
 @media(min-width:640px){ .sponsors-grid { grid-template-columns:repeat(2,1fr); } }
 @media(min-width:768px){ .sponsors-grid { grid-template-columns:repeat(3,1fr); } }
 @media(min-width:1024px){ .sponsors-grid { grid-template-columns:repeat(4,1fr); } }
