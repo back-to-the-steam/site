@@ -52,7 +52,7 @@
       "id": 7,
       "titre": "Conception technique",
       "description": "Travail sur la mécanique, l'aérodynamique et le design extérieur. Modélisation 3D des composants principaux.",
-      "date": "?",
+      "date": "Janvier 2026",
       "pourcentage": 0,
       "status": "in-progress"
     },
@@ -61,7 +61,7 @@
       "id": 8,
       "titre": "Prototypage et impression 3D",
       "description": "Fabrication des premiers prototypes avec impression 3D. Tests des pièces et ajustements techniques.",
-      "date": "?",
+      "date": "Janvier 2026",
       "pourcentage": 0,
       "status": "upcoming"
     },
