@@ -121,7 +121,7 @@ html, body {
 }
 .faq-cat-btn.active {
   background:#C97B32;
-  color:#c9c9c9;
+  color:#0F1218;
   border-color:#C97B32;
 }
 
@@ -185,7 +185,7 @@ html, body {
 
 .faq-cat-label {
   background:#C97B32;
-  color:#e4e4e5;
+  color:#0F1218;
   padding:0.2rem 0.6rem;
   border-radius:0.3rem;
   font-size:0.75rem;
@@ -202,7 +202,6 @@ html, body {
   background:#0f1218;
   display:none;
   line-height:1.6;
-  color: #EAEAEA;
 }
 .faq-card.active {
   border-color: #C97B32 !important;
