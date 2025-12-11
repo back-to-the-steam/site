@@ -2,25 +2,25 @@
   {
     "id": 1,
     "titre": "Lancement du projet Back to the Steam",
-    "description": "Notre équipe est fière d'annoncer le lancement officiel du projet Back to the Steam pour Course en Cours 2024-2025. Avec un concept rétrofuturiste inspiré de la locomotive 141R, nous sommes prêts à repousser les limites de la créativité et de l'ingénierie.",
+    "description": "Notre équipe est fière d'annoncer le lancement officiel du projet Back to the Steam pour Course en Cours 2025-2026. Avec un concept rétrofuturiste inspiré de la locomotive 141R, nous sommes prêts à repousser les limites de la créativité et de l'ingénierie.",
     "image": "https://images.unsplash.com/photo-1667149226829-d24fba50b536?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "date": "Octobre 2024",
+    "date": "Juin 2025",
     "tag": "Annonce"
   },
   {
     "id": 2,
     "titre": "Nouveau logo et identité visuelle",
     "description": "Découvrez notre nouveau logo qui capture parfaitement l'esprit du projet : un design rétrofuturiste avec des couleurs dégradées orange et bleu, symbolisant la fusion entre passé et futur. Cette identité visuelle unique nous accompagnera tout au long de l'aventure.",
-    "image": "https://images.unsplash.com/photo-1666235729156-7fc93d7922ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "date": "Novembre 2024",
+    "image": "../img/logo.jpg",
+    "date": "Octobre 2025",
     "tag": "Design"
   },
   {
     "id": 3,
     "titre": "Premiers croquis du véhicule",
     "description": "Les premiers dessins de notre véhicule sont terminés ! Un design qui marie l'esthétique massive de la 141R avec des lignes aérodynamiques modernes. Chaque détail a été pensé pour raconter notre histoire.",
-    "image": "https://images.unsplash.com/photo-1727522974614-b592018e49e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    "date": "Novembre 2024",
+    "image": "../img/plan.JPG",
+    "date": "Décembre 2025",
     "tag": "Conception"
   }
 

@@ -32,6 +32,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
 .design ul { padding-left: 1rem; }
 .design ul li { margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: flex-start; }
 .design-image img { width: 100%; height: 24rem; object-fit: cover; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+.fabrication-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 
 @media(min-width:768px){ .design { grid-template-columns: repeat(2,1fr); } }
 

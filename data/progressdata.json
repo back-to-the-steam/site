@@ -3,7 +3,7 @@
     {
       "id": 1,
       "titre": "Constitution de l'équipe",
-      "description": "Formation de l'équipe Back to the Steam et répartition des rôles : chef de projet, Ingénieur dans les systèmes numériques, responsable de la communnication et des sponsorings, ingénieure fadrication et essais, ingénieur style et design et ingénierie concepetion.",
+      "description": "Formation de l'équipe Back to the Steam et répartition des rôles : chef de projet, Ingénieur dans les systèmes numériques, responsable de la communnication et des sponsorings, ingénieur fadrication et essais, ingénieur conception et ingénieur style & design.",
       "date": "Juin 2025",
       "pourcentage": 100,
       "status": "completed"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "titre": "Recherche et concept véhicule",
-      "description": "Phase de recherche approfondie sur l'esthétique steampunk et la locomotive 141R. Élaboration des premiers dessins et concepts du véhicule.",
+      "description": "Phase de recherche approfondie sur l'esthétique cyberpunk et la locomotive 141R. Élaboration des premiers dessins et concepts du véhicule.",
       "date": "Novembre 2025",
       "pourcentage": 100,
       "status": "completed"
@@ -53,7 +53,7 @@
       "titre": "Conception technique",
       "description": "Travail sur la mécanique, l'aérodynamique et le design extérieur. Modélisation 3D des composants principaux.",
       "date": "Janvier 2026",
-      "pourcentage": 0,
+      "pourcentage": 20,
       "status": "in-progress"
     },
    

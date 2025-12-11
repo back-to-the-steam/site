@@ -3,20 +3,34 @@
 // ------------------------
 document.addEventListener("DOMContentLoaded", () => {
 
+ // ------------------------
+  // SCROLL SYSTEM
   // ------------------------
-  // SCROLL TO WORKSHOP
-  // ------------------------
-  const scrollBtn = document.getElementById("scrollToWorkshop");
-  if (scrollBtn) {
-    scrollBtn.addEventListener("click", () => {
-      const workshopElement = document.getElementById("workshop");
-      if (workshopElement) {
-        const navHeight = 80;
-        const targetPosition = workshopElement.offsetTop - navHeight;
-        window.scrollTo({ top: targetPosition, behavior: "smooth" });
-      }
-    });
-  }
+  const scrollMap = [
+    { btn: "scrollToWorkshop", target: "workshop" },
+    { btn: "1", target: "1a" },
+    { btn: "2", target: "2a" },
+    { btn: "3", target: "3a" },
+    { btn: "4", target: "4a" }
+  ];
+
+  scrollMap.forEach(item => {
+    const btn = document.getElementById(item.btn);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        const section = document.getElementById(item.target);
+        if (section) {
+          const navHeight = 80;
+          const pos = section.offsetTop - navHeight;
+
+          window.scrollTo({
+            top: pos,
+            behavior: "smooth"
+          });
+        }
+      });
+    }
+  });
 
   // ------------------------
   // LOAD NAV + BURGER MENU
