@@ -53,7 +53,7 @@
       "titre": "Conception technique",
       "description": "Travail sur la mécanique, l'aérodynamique et le design extérieur. Modélisation 3D des composants principaux.",
       "date": "Janvier 2026",
-      "pourcentage": 20,
+      "pourcentage": 80,
       "status": "in-progress"
     },
    
@@ -70,7 +70,7 @@
       "titre": "Conception du stand",
       "description": "Design et préparation du stand de présentation avec esthétique cohérente au thème vapeur/rétrofuturiste.",
       "date": "Février 2026",
-      "pourcentage": 30,
+      "pourcentage": 40,
       "status": "in-progress"
     },
     {
@@ -86,8 +86,8 @@
       "titre": "Tests et optimisations",
       "description": "Cycles de tests rigoureux sur piste. Optimisation de la performance et de la fiabilité.",
       "date": "Mars - Avril 2026",
-      "pourcentage": 0,
-      "status": "upcoming"
+      "pourcentage": 10,
+      "status": "in-progress"
     },
     {
       "id": 12,
