@@ -18,23 +18,34 @@ body {
 
 /* ===================== */
 /* HERO SECTION          */
-/* ===================== */
+/* ==============
+======= */
 .hero-section {
-  background-image: url('../img/team.JPG');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 6rem 1rem;
+position: relative;
+  width: 100%;
+  overflow: hidden;
   text-align: center;
 }
 
+.hero-section img {
+  width: 100%;
+  height: auto;
+  display: block; /* supprime les espaces fantômes */
+}
+
 .hero-container {
-  max-width: 64rem;
-  margin: 0 auto;
+  position: absolute;
+  inset: 0; /* top right bottom left = 0 */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
   align-items: center;
+
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+  pointer-events: none; /* optionnel */
+  color: white;
 }
 
 .hero-logo-container {
