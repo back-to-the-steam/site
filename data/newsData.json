@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titre": "Lancement du projet Back to the Steam",
-    "description": "Notre équipe est fière d'annoncer le lancement officiel du projet Back to the Steam pour Course en Cours 2025-2026. Avec un concept rétrofuturiste inspiré de la locomotive 141R, nous sommes prêts à repousser les limites de la créativité et de l'ingénierie.",
+    "description": "Notre équipe est fière d’annoncer le lancement officiel du projet Back to the Steam pour Course en Cours 2025-2026. Inspiré par l’univers rétrofuturiste et la locomotive 141R, ce projet marque le début d’une aventure mêlant créativité, ingénierie et passion.",
     "image": "https://images.unsplash.com/photo-1667149226829-d24fba50b536?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     "date": "Juin 2025",
     "tag": "Annonce"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "titre": "Nouveau logo et identité visuelle",
-    "description": "Découvrez notre nouveau logo qui capture parfaitement l'esprit du projet : un design rétrofuturiste avec des couleurs dégradées orange et bleu, symbolisant la fusion entre passé et futur. Cette identité visuelle unique nous accompagnera tout au long de l'aventure.",
+    "description": "Découvrez le logo officiel du projet Back to the Steam. Son design rétrofuturiste et ses dégradés de couleurs orange et bleu symbolisent le lien entre héritage industriel et innovation technologique.",
     "image": "../img/logo.jpg",
     "date": "Octobre 2025",
     "tag": "Design"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "titre": "Premiers croquis du véhicule",
-    "description": "Les premiers dessins de notre véhicule sont terminés ! Un design qui marie l'esthétique massive de la 141R avec des lignes aérodynamiques modernes. Chaque détail a été pensé pour raconter notre histoire.",
+    "description": "Les premiers croquis du véhicule sont finalisés. Ils associent l’esthétique massive et iconique de la 141R à des lignes modernes et aérodynamiques, posant les bases du design final.",
     "image": "../img/plan.JPG",
     "date": "Décembre 2025",
     "tag": "Conception"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "titre": "Première modélisation du véhicule",
-    "description": "Le premier modèle de notre véhicule est presque terminé !",
+    "description": "La première modélisation du véhicule est en grande partie achevée. Elle permet de visualiser concrètement les choix techniques et esthétiques du projet.",
     "image": "../img/modele1.png",
     "date": "Décembre 2025",
     "tag": "Conception"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "titre": "Amélioration du véhicule",
-    "description": "Amélioration de notre véhicule !",
+    "description": "Le véhicule évolue avec plusieurs améliorations techniques et esthétiques visant à optimiser ses performances et sa cohérence globale.",
     "image": "../img/modele2.png",
     "date": "Janvier 2026",
     "tag": "Conception"
@@ -42,9 +42,41 @@
   {
     "id": 6,
     "titre": "Le moteur",
-    "description": "Le moteur de notre véhicule est enfin arrivé !",
+    "description": "Le moteur de notre véhicule est enfin arrivé. Cette étape marque un tournant important dans l’avancement du projet et ouvre la voie aux premiers tests mécaniques.",
     "image": "../img/moteur.png",
     "date": "Janvier 2026",
     "tag": "Mécanique"
+  },
+  {
+    "id": 7,
+    "titre": "Shooting photo",
+    "description": "Un shooting photo de l’équipe a été réalisé par Enzo afin de préparer la communication et la présentation officielle du projet.",
+    "image": "../img/shooting.jpeg",
+    "date": "Janvier 2026",
+    "tag": "Photos"
+  },
+  {
+    "id": 8,
+    "titre": "Design final du véhicule",
+    "description": "Le design final du véhicule est désormais terminé. Il représente l’aboutissement des choix esthétiques et techniques réalisés tout au long du projet.",
+    "image": "../img/designfinal.png",
+    "date": "Janvier 2026",
+    "tag": "Design"
+  },
+  {
+    "id": 9,
+    "titre": "Design du stand",
+    "description": "Le design du stand fait par Alexandre est finalisé. Il a été pensé pour mettre en valeur le véhicule et l’univers du projet lors des présentations et compétitions.",
+    "image": "../img/stand1.jpg",
+    "date": "Février 2026",
+    "tag": "Stand"
+  },
+  {
+    "id": 10,
+    "titre": "Modélisation du stand",
+    "description": "La modélisation du stand réalisée par Mathéo est achevée. Elle permet d’anticiper l’aménagement final et de préparer sa fabrication.",
+    "image": "../img/stand2.png",
+    "date": "Février 2026",
+    "tag": "Modélisation"
   }
 ]
