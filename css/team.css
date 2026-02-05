@@ -20,7 +20,9 @@ body {
 /* HERO SECTION          */
 /* ===================== */
 .hero-section {
-  background: linear-gradient(to bottom right, #374151, #1f2937, #111827);
+  background-image: url('../img/team.JPG');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 6rem 1rem;
   text-align: center;
