@@ -67,7 +67,7 @@
     "id": 9,
     "titre": "Design du stand",
     "description": "Le design du stand fait par Alexandre est finalisé. Il a été pensé pour mettre en valeur le véhicule et l’univers du projet lors des présentations et compétitions.",
-    "image": "../img/stand1.jpg",
+    "image": "../img/Stand1.jpg",
     "date": "Février 2026",
     "tag": "Stand"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "titre": "Modélisation du stand",
     "description": "La modélisation du stand réalisée par Mathéo est achevée. Elle permet d’anticiper l’aménagement final et de préparer sa fabrication.",
-    "image": "../img/stand2.png",
+    "image": "../img/Stand2.png",
     "date": "Février 2026",
     "tag": "Modélisation"
   }
