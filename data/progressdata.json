@@ -45,7 +45,7 @@
       "titre": "Recherche de sponsors",
       "description": "Préparation des dossiers de sponsoring et prise de contact avec les entreprises locales de Colmar et environs.",
       "date": "Novembre 2025",
-      "pourcentage": 75,
+      "pourcentage": 80,
       "status": "in-progress"
     },
     {
@@ -53,8 +53,8 @@
       "titre": "Conception technique",
       "description": "Travail sur la mécanique, l'aérodynamique et le design extérieur. Modélisation 3D des composants principaux.",
       "date": "Janvier 2026",
-      "pourcentage": 90,
-      "status": "in-progress"
+      "pourcentage": 100,
+      "status": "completed"
     },
    
     {
@@ -62,7 +62,7 @@
       "titre": "Prototypage et impression 3D",
       "description": "Fabrication des premiers prototypes avec impression 3D. Tests des pièces et ajustements techniques.",
       "date": "Janvier 2026",
-      "pourcentage": 0,
+      "pourcentage": 80,
       "status": "upcoming"
     },
     {
@@ -70,7 +70,7 @@
       "titre": "Conception du stand",
       "description": "Design et préparation du stand de présentation avec esthétique cohérente au thème vapeur/rétrofuturiste.",
       "date": "Février 2026",
-      "pourcentage": 40,
+      "pourcentage": 70,
       "status": "in-progress"
     },
     {
@@ -78,7 +78,7 @@
       "titre": "Assemblage final du véhicule",
       "description": "Assemblage des composants finaux, tests de performance et ajustements. Finitions esthétiques.",
       "date": "Mars 2026",
-      "pourcentage": 0,
+      "pourcentage": 20,
       "status": "upcoming"
     },
     {
@@ -99,7 +99,7 @@
     },
     {
       "id": 13,
-      "titre": "Remise des trophés",
+      "titre": "Remise des trophées",
       "description": "Résultats du concours.",
       "date": "Mai 2026",
       "pourcentage": 0,
