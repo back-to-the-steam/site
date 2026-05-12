@@ -30,7 +30,7 @@
       "description": "Lancement de la communication sur Instagram. Création de contenu photos et vidéos pour présenter le projet.",
       "date": "Octobre 2025 - En cours",
       "pourcentage": 70,
-      "status": "in-progress"
+      "status": "completed"
     },
     {
       "id": 5,
@@ -46,7 +46,7 @@
       "description": "Préparation des dossiers de sponsoring et prise de contact avec les entreprises locales de Colmar et environs.",
       "date": "Novembre 2025",
       "pourcentage": 80,
-      "status": "in-progress"
+      "status": "completed"
     },
     {
       "id": 7,
@@ -70,40 +70,48 @@
       "titre": "Conception du stand",
       "description": "Design et préparation du stand de présentation avec esthétique cohérente au thème vapeur/rétrofuturiste.",
       "date": "Février 2026",
-      "pourcentage": 99,
-      "status": "in-progress"
+      "pourcentage": 100,
+      "status": "completed"
     },
     {
       "id": 10,
       "titre": "Assemblage final du véhicule",
       "description": "Assemblage des composants finaux, tests de performance et ajustements. Finitions esthétiques.",
       "date": "Mars 2026",
-      "pourcentage": 80,
-      "status": "in-progress"
+      "pourcentage": 100,
+      "status": "completed"
     },
     {
       "id": 11,
       "titre": "Tests et optimisations",
       "description": "Cycles de tests rigoureux sur piste. Optimisation de la performance et de la fiabilité.",
       "date": "Mars - Avril 2026",
-      "pourcentage": 30,
-      "status": "in-progress"
+      "pourcentage": 100,
+      "status": "completed"
     },
     {
       "id": 12,
       "titre": "Compétition Course en Cours",
-      "description": "Participation à la finale régionale puis nationale de Course en Cours. Présentation du projet devant le jury.",
+      "description": "Participation à la finale régionale de Course en Cours. Présentation du projet devant le jury.",
       "date": "11 Mai 2026",
-      "pourcentage": 0,
-      "status": "upcoming"
+      "pourcentage": 100,
+      "status": "completed"
     },
     {
       "id": 13,
       "titre": "Remise des trophées",
       "description": "Résultats du concours.",
       "date": "Mai 2026",
+      "pourcentage": 100,
+      "status": "completed"
+    },
+    {
+      "id": 14,
+      "titre": "Olympiades des sciences de l'ingénieur",
+      "description": "suite a notre seconde places a course en cours régionales nous nous rabattons sur les OSI.",
+      "date": "Mai 2026",
       "pourcentage": 0,
-      "status": "upcoming"
+      "status": "incoming"
     }
   ]
 }

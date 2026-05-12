@@ -78,5 +78,29 @@
     "image": "../img/stand2.png",
     "date": "Février 2026",
     "tag": "Modélisation"
+  },
+  {
+    "id": 11,
+    "titre": "Stand terminé!",
+    "description": "notre stand est enfin terminé, il a été conçu pour être à la fois fonctionnel et esthétique, avec une esthétique cohérente au thème vapeur/rétrofuturiste.",
+    "image": "../img/stand3.png",
+    "date": "Février 2026",
+    "tag": "Modélisation"
+  },
+  {
+    "id": 12,
+    "titre": "Une défaite mais pas la fin",
+    "description": "Nous sommes arrivés deuxième au concours régional c'est donc ici que notre aventure s'arrète pour Back to the Steam dans le cadre de course en cours.",
+    "image": "../img/CeC.png",
+    "date": "Février 2026",
+    "tag": "Modélisation"
+  }, 
+  {
+    "id": 13,
+    "titre": "Back to OSI",
+    "description": "Suite a notre défaite pour course en cours direction les OSI ou notre seul but est de battre nos rivaux qui nous sont passer devant pour CeC Geistwagen.",
+    "image": "../img/OSI.png",
+    "date": "Février 2026",
+    "tag": "Modélisation"
   }
 ]
