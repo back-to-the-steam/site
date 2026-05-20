@@ -102,5 +102,13 @@
     "image": "../img/OSI.png",
     "date": "Février 2026",
     "tag": "Modélisation"
+  },
+   {
+    "id": 14,
+    "titre": "Le temps de la fin",
+    "description": "Nous n'avons eu aucun prix aux OSI c'est donc avec cela que s'arrète notre aventure pour cette année scolaire, nous avons hâte de recommencer l'année prochaine avec un nouveau projet et de nouveaux objectifs.",
+    "image": "../img/END.png",
+    "date": "Février 2026",
+    "tag": "Modélisation"
   }
 ]

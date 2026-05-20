@@ -110,8 +110,8 @@
       "titre": "Olympiades des sciences de l'ingénieur",
       "description": "suite a notre seconde places a course en cours régionales nous nous rabattons sur les OSI.",
       "date": "Mai 2026",
-      "pourcentage": 0,
-      "status": "incoming"
+      "pourcentage": 100,
+      "status": "completed"
     }
   ]
 }
